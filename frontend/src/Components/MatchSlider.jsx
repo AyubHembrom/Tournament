@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const products = [
-    { id: 1, img: "https://esports.battlegroundsmobileindia.com/images/static-images/BGIS_2023/thumbnail.png", name: "Match 1", date: "12/2/2025" },
+    { id: 3, img: "https://miro.medium.com/v2/resize:fit:1100/format:webp/0*nxEyX4PZ4DuiClXB", name: "Match 3", date: "1/3/2025" },
+    { id: 1, img: "https://media.licdn.com/dms/image/v2/D5612AQHrY8PjKY3xVA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1713754261633?e=2147483647&v=beta&t=FKsjptkNVvuprLthetMZC3lzdqWJ2kkPN-w_O8WcBoY", name: "Match 1", date: "12/2/2025" },
     { id: 2, img: "https://esports.battlegroundsmobileindia.com/images/static-images/BGIS_2024/thumbnail.png", name: "Match 2", date: "25/2/2025" },
-    { id: 3, img: "https://esports.battlegroundsmobileindia.com/images/static-images/INKR_SERIES/thumbnail.png", name: "Match 3", date: "1/3/2025" },
+    
     { id: 4, img: "https://esports.battlegroundsmobileindia.com/images/static-images/BGIS_2023/thumbnail.png", name: "Match 4", date: "25/2/2025" },
 ];
 
