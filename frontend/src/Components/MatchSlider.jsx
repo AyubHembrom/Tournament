@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const products = [
-    { id: 3, img: "https://miro.medium.com/v2/resize:fit:1100/format:webp/0*nxEyX4PZ4DuiClXB", name: "Match 3", date: "1/3/2025" },
-    { id: 1, img: "https://media.licdn.com/dms/image/v2/D5612AQHrY8PjKY3xVA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1713754261633?e=2147483647&v=beta&t=FKsjptkNVvuprLthetMZC3lzdqWJ2kkPN-w_O8WcBoY", name: "Match 1", date: "12/2/2025" },
-    { id: 2, img: "https://esports.battlegroundsmobileindia.com/images/static-images/BGIS_2024/thumbnail.png", name: "Match 2", date: "25/2/2025" },
-    
-    { id: 4, img: "https://esports.battlegroundsmobileindia.com/images/static-images/BGIS_2023/thumbnail.png", name: "Match 4", date: "25/2/2025" },
+    { id: 3, img: "https://miro.medium.com/v2/resize:fit:1100/format:webp/0*nxEyX4PZ4DuiClXB", name: "Killer Winner", date: "1/3/2025" },
+    { id: 1, img: "https://media.licdn.com/dms/image/v2/D5612AQHrY8PjKY3xVA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1713754261633?e=2147483647&v=beta&t=FKsjptkNVvuprLthetMZC3lzdqWJ2kkPN-w_O8WcBoY", name: "Last Survival Wiiner", date: "12/2/2025" },
+    { id: 2, img: "https://w0.peakpx.com/wallpaper/968/648/HD-wallpaper-man-with-gun-and-fire-on-background-pubg.jpg", name: "Weeken Squad", date: "25/2/2025" },
+    { id: 4, img: "https://esports.battlegroundsmobileindia.com/images/static-images/BGIS_2023/thumbnail.png", name: "Solo Match", date: "25/2/2025" },
 ];
 
 export default function MatchSlider() {
@@ -18,7 +17,7 @@ export default function MatchSlider() {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length);
     };
 
-    const prevSlide = () => {
+    const prevSlide = () => { 
         setCurrentIndex((prevIndex) =>
             prevIndex === 0 ? products.length - 1 : prevIndex - 1
         );
@@ -43,25 +42,27 @@ export default function MatchSlider() {
                         >
 
                             <Link to="/room/product.id" className="flex flex-col gap-2">
-                            <img
-                                src={product.img}
-                                alt={product.name}
-                                className="w-full h-48 object-cover rounded-lg"
-                            />
-                            <div className="flex-col justify-start ">
+                                <img
+                                    src={product.img}
+                                    alt={product.name}
+                                    className="w-full h-48 object-cover rounded-lg"
+                                />
+                                <div className="flex-col justify-start ">
 
-                                <h3 className=" text-lg font-semibold mt-2">
-                                    {product.name}
-                                </h3>
-                                <p className="text-green-500">Invite</p>
-                            </div>
-                            <div>
-                                <h2>
-                                    Date: {product.date}
-                                </h2>
-                            </div>
+                                    <h3 className=" text-lg font-semibold mt-2">
+                                        {product.name}
+                                    </h3>
+                                    <p className="text-green-500">Invite</p>
+                                </div>
+                                <div className="flex justify-between items-center">
+                                    <h2>
+                                        Date: {product.date}
+                                    </h2>
+                                   
+                                    <Link to="/join" className="m-1 block px-6 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-600 hover:border md:inline">Join Now</Link>
+                                </div>
                             </Link>
-                            
+
                         </motion.div>
 
                     ))}

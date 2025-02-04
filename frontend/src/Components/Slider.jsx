@@ -5,19 +5,20 @@ const Slider = () => {
 
   const slides = [
     {
-      image: 'https://media.istockphoto.com/id/1333215128/photo/head-shot-of-gamer-talking-on-headphones-while-playing-live-streaming-game-or-esports.webp?a=1&b=1&s=612x612&w=0&k=20&c=OAxfcN5oYm8GT1XITn-FglVjKxFuvj_IXpzeyNzB2IU=',
+      image: 'https://w0.peakpx.com/wallpaper/968/648/HD-wallpaper-man-with-gun-and-fire-on-background-pubg.jpg',
+      text: 'Third Slide Text',
+      caption: 'Caption for the third slide'
+    },
+    {
+      image: 'https://miro.medium.com/v2/resize:fit:1100/format:webp/0*nxEyX4PZ4DuiClXB',
       text: 'First Slide Text',
       caption: 'Caption for the first slide'
     },
     {
-      image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGdhbWUlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D',
+      image: 'https://media.licdn.com/dms/image/v2/D5612AQHrY8PjKY3xVA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1713754261633?e=2147483647&v=beta&t=FKsjptkNVvuprLthetMZC3lzdqWJ2kkPN-w_O8WcBoY',
       text: 'Second Slide Text',
       caption: 'Caption for the second slide'
-    },
-    {
-      image: 'https://media.istockphoto.com/id/841136006/photo/team-of-professional-esport-gamers-playing-in-competitive-video-games-on-a-cyber-games.webp?a=1&b=1&s=612x612&w=0&k=20&c=DlwSfMljrc-f5wx3j_61aax8HGrpSkh4A-v362aCu1E=',
-      text: 'Third Slide Text',
-      caption: 'Caption for the third slide'
+
     },
   ];
 
@@ -36,7 +37,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative h-[600px] w-full overflow-hidden">
+    <div className="relative h-[600px] w-full overflow-hidden mt-2">
       {slides.map((slide, slideIndex) => (
         <div
           key={slideIndex}
@@ -52,20 +53,20 @@ const Slider = () => {
           {/* Text Overlay */}
           <div className="absolute inset-0 flex flex-col bg-black bg-opacity-30">
             <div className='mt-40 mx-10'>
-            <div className=" text-white">
-            <h2 className="text-4xl text-blue-500 font-bold mb-4">Raisng Star</h2>
-            <h2 className="text-2xl  mb-4 ">
+              <div className=" text-white">
+                <h2 className="text-4xl text-blue-500 font-bold mb-4">Raisng Star</h2>
+                <h2 className="text-2xl  mb-4 ">
 
-              <HeroSection/>
-            </h2>
-              
-              <p className="text-xl"></p>
-            </div>
-            <div>
-              <button className='p-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300'>
-                <a href="/#">Register Now</a>
-              </button>
-            </div>
+                  <HeroSection />
+                </h2>
+
+                <p className="text-xl"></p>
+              </div>
+              <div>
+                <button className='p-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300'>
+                  <a href="/#">Register Now</a>
+                </button>
+              </div>
             </div>
           </div>
         </div>
