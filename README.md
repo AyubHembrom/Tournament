@@ -1,4 +1,4 @@
-# Esports Tournament Frontend
+# Esports Tournaments
 
 This is the frontend for the Esports Tournament application built with React. It includes various components such as Home, Signup, and Login pages, as well as several reusable components like NavBar, Slider, MatchSlider, FAQ, GetInTouch, and Footer.
 
@@ -20,9 +20,13 @@ This is the frontend for the Esports Tournament application built with React. It
 
 
 2.Navigate to the project directory:
-    cd Tournament
+   ```sh
+   cd Tournament
+
 3. Install the dependencies:
-    npm install
+   ```sh
+   npm install
+    
 
 ## Usage
 
