@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 const ProfileDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const user = { // Example user data
@@ -48,13 +48,17 @@ const ProfileDropdown = () => {
               <div className="font-medium">{user.name}</div>
               <div className="text-xs text-gray-500">{user.email}</div>
             </div>
-            <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabIndex="-1" id="user-menu-item-1">
+            <Link to="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabIndex="-1" id="user-menu-item-1">
               Your Profile
+            </Link>
+            <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabIndex="-1" id="user-menu-item-2">
+               My Teams
             </a>
             <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabIndex="-1" id="user-menu-item-2">
-              Settings
+              My Tournaments
             </a>
-            <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabIndex="-1" id="user-menu-item-3">
+            
+            <a href="#" className="block px-4 py-2 text-sm text-red-500 hover:bg-gray-100" role="menuitem" tabIndex="-1" id="user-menu-item-3">
               Sign out
             </a>
           </div>

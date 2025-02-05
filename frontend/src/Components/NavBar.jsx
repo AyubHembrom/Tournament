@@ -10,6 +10,7 @@ const NavBar = () => {
         <div className='sticky top-0 z-50 bg-gray-800'>
             <div className='flex items-center justify-between p-4'>
                 {/* Logo */}
+                <Link to="/">
                 <div className='w-16 h-10'>
                     <img 
                         src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGdhbWUlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D" 
@@ -17,6 +18,8 @@ const NavBar = () => {
                         className='h-full w-full rounded object-cover'
                     />
                 </div>
+                 </Link>
+               
                 
                 {/* Mobile Menu Button */}
                 <button className='md:hidden text-white' onClick={() => setIsOpen(!isOpen)}>
