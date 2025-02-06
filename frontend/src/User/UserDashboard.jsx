@@ -3,11 +3,20 @@ import { Link } from "react-router-dom"
 import Footer from "../Components/Footer";
 import NavBar from "../Components/NavBar";
 import EditModal from "./EditModal";
+import { BadgeCheck, Bell, UserCircle } from "lucide-react";
 export default function UserDashboard() {
     const [activeTab, setActiveTab] = useState("profile");
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
     const [editData, setEditData] = useState({}); // To store data for editing
 
+    const user = {
+        name: "Sara",
+        image: "https://cdn.vectorstock.com/i/1000v/51/87/student-avatar-user-profile-icon-vector-47025187.avif",
+        email: "example@gmail.com",
+        invites: "6",
+        verified: true,
+    
+    };
     const person = {
         firstName: "Sara",
         lastName: "Jones",
@@ -38,12 +47,42 @@ export default function UserDashboard() {
                     editData={person}
                     activeSection={activeTab}
                     setEditData={setEditData}
-
-
-
                 />
             )}
             <NavBar />
+
+            <div className="flex justify-center items-center">
+            <div className="w-80  shadow-lg rounded-2xl p-4 flex items-center gap-4 border border-gray-200">
+                {user.image ? (
+                    <img
+                        src={` ${user.image}`}
+                        alt="Profile"
+                        className="w-16 h-16 rounded-full object-cover border border-gray-300"
+                    />
+                ) : (
+                    <UserCircle className="w-16 h-16 text-gray-400" />
+                )}
+
+                <div className="flex flex-col flex-1">
+                    <div className="flex items-center justify-between">
+                        <h3 className="text-lg font-semibold">{user.name}</h3>
+                        {user.verified && <BadgeCheck className="w-5 h-5 text-blue-500" />}
+                    </div>
+                    <p className="text-sm text-gray-500">{user.email}</p>
+                </div>
+
+                {user.invites > 0 && (
+                    <div className="relative">
+                        <Bell className="w-6 h-6 text-gray-300" />
+                        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                          {user.invites}
+                        </span>
+                    </div>
+                )}
+            </div>
+            </div>
+
+
             <div className="max-w-3xl mx-auto p-6">
                 <div className="flex border-b border-gray-300">
                     <button
@@ -81,6 +120,10 @@ export default function UserDashboard() {
                                     <div >Last name</div>
                                     <div className="text-gray-400"> {person.lastName} </div>
                                 </div>
+                            </div>
+                            <div>
+                                <div >Phone Number</div>
+                                <div className="text-gray-400">+91-{person.Phone} </div>
                             </div>
                             <div>
                                 <div >Date of Birth</div>
@@ -122,14 +165,13 @@ export default function UserDashboard() {
                                 <label className="block text-sm font-medium  mb-1">
                                     Game ID
                                 </label>
-                                <input type="text" placeholder="Game ID" className="w-full p-2 border rounded mb-2" />
-                                <label className="block text-sm font-medium  mb-1">
-                                    Player Name ( Game Unique Name)
-                                </label>
-                                <input type="text" placeholder="Team Name" className="w-full p-2 border rounded mb-2" />
+                                <input type="text" placeholder="Game ID" className="w-full p-2 border  rounded mb-2" />
+                                
                             </div>
 
-                            <button className="m-1 block px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 md:inline">Create Team</button>
+                            <button className="m-1 block px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 md:inline">
+                                Add Player
+                            </button>
                         </div>
                     )}
                 </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { BadgeCheck, Bell, UserCircle } from "lucide-react";
 const ProfileDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const user = { // Example user data
@@ -14,7 +15,8 @@ const ProfileDropdown = () => {
 
   return (
     <div className="relative inline-block text-left mt-3 ">
-      <div>
+      <div className='flex items-center justify-center space-x-2'>
+        <Bell className="w-6 h-6 text-gray-300" />
         <button
           type="button"
           className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"

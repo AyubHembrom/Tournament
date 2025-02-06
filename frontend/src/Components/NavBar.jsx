@@ -40,6 +40,7 @@ const NavBar = () => {
 
                 {/* Profile Dropdown */}
                 <div className='hidden md:block'>
+                
                     <ProfileDropdown />
                 </div>
             </div>
