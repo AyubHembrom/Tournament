@@ -28,8 +28,8 @@ const NavBar = () => {
 
                 {/* Navigation Links */}
                 <div className={`absolute md:static top-16 left-0 w-full bg-gray-800 md:flex md:items-center md:space-x-4 p-4 md:p-0 ${isOpen ? 'block' : 'hidden'}`}>
-                    <Link to="" className="block px-4 p-2 text-white bg-blue-800 rounded-md hover:bg-blue-500 md:inline md:py-1">Tournaments</Link>
-                    <Link to="" className="block px-4 p-2 text-white bg-blue-800 rounded-md hover:bg-blue-500 md:inline md:py-1">Winners</Link>
+                    <Link to="/tournament" className="block px-4 p-2 text-white bg-blue-800 rounded-md hover:bg-blue-500 md:inline md:py-1">Tournaments</Link>
+                    <Link to="/winner" className="block px-4 p-2 text-white bg-blue-800 rounded-md hover:bg-blue-500 md:inline md:py-1">Winners</Link>
                 </div>
 
                 {/* Login/Register Buttons */}

@@ -75,10 +75,7 @@ const EditModal = ({ closeEditModal, editData, activeSection, setEditData }) => 
                   Game ID
                 </label>
                 <input type="text" placeholder="Game ID" className="w-full px-4 py-2 border border-gray-300 rounded-md" />
-                <label className="block text-sm font-medium  mb-1">
-                  Player Name ( Game Unique Name)
-                </label>
-                <input type="text" placeholder="Team Name" className="w-full p-2 border rounded mb-2" />
+               
               </div>
 
             </div>
